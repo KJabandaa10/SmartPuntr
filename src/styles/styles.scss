@@ -3,13 +3,56 @@
   margin: 0;
   box-sizing: border-box;
 }
-// variables
+
+// Variables
+// Colours
 $colors: (
   primary: #1593ff,
   primary-light: lighten(#1593ff, 40%),
-  primary-dark: darken(#1593ff, 10%)
+  primary-dark: darken(#1593ff, 10%),
+  light-blue: #abd4f2
 );
-// mixins
+
+// Media Queries
+// Responsiive mq values
+$phone-sm: 375px;
+$phone-lg: 414px;
+$tablet-mini: 768px;
+$tablet-sm: 834px;
+$tablet-lg: 1024px;
+$laptop-sm: 1440px;
+$med-screen: 1880px;
+$lg-screen: 2440px;
+$tv: 2550px;
+
+// Mixins
+// Media queries
+@mixin for-phone-only {
+  @media screen and (max-width: $phone-lg) {
+    @content;
+  }
+}
+@mixin for-phone-up {
+  @media screen and (min-width: $phone-sm) {
+    @content;
+  }
+}
+@mixin for-tablet-up {
+  @media screen and (min-width: $tablet-mini) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media screen and (min-width: $laptop-sm) {
+    @content;
+  }
+}
+@mixin for-desktop-only {
+  @media screen and (max-width: $med-screen) {
+    @content;
+  }
+}
+// Get color mixin
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
@@ -20,16 +63,24 @@ $colors: (
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5em 5em;
-    background: #b3d6f0;
+    padding: 0.5em 1em;
+    background: color(light-blue);
     width: 100vw;
     position: fixed;
     transition: ease-in-out 250ms;
 
-    img {
-      width: 200px;
-      height: auto;
+    @include for-tablet-up() {
+      padding: 0.5em 5em;
     }
+
+    img {
+      width: 150px;
+
+      @include for-tablet-up() {
+        width: 200px;
+      }
+    }
+
     .nav-button,
     .button {
       color: color(primary);
@@ -39,6 +90,7 @@ $colors: (
       padding: 0.5em 1em;
       font-size: 14px;
       transition: ease-in-out 200ms;
+      white-space: nowrap;
     }
     .button:hover,
     .button.active:hover,
@@ -71,6 +123,7 @@ $colors: (
   box-shadow: 0 2px 3px 0 hsla(0, 0%, 0%, 0.2);
 }
 
+// content
 .content {
   padding: 50rem 0;
 }
