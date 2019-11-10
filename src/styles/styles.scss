@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 // Variables
@@ -33,12 +34,17 @@ $tv: 2550px;
   }
 }
 @mixin for-phone-up {
-  @media screen and (min-width: $phone-sm) {
+  @media screen and (min-width: $phone-lg) {
     @content;
   }
 }
 @mixin for-tablet-up {
   @media screen and (min-width: $tablet-mini) {
+    @content;
+  }
+}
+@mixin for-tablet-lg-up {
+  @media screen and (min-width: $tablet-lg) {
     @content;
   }
 }
@@ -58,6 +64,7 @@ $tv: 2550px;
 }
 
 .container {
+  // Navbar
   section.navbar {
     display: flex;
     flex-direction: row;
@@ -81,17 +88,12 @@ $tv: 2550px;
       }
     }
 
-    .nav-button,
-    .button {
+    .nav-button {
       color: color(primary);
       background: #b3d6f0;
       border: 1px solid color(primary);
-      border-radius: 5px;
-      padding: 0.5em 1em;
-      font-size: 14px;
-      transition: ease-in-out 200ms;
-      white-space: nowrap;
     }
+
     .button:hover,
     .button.active:hover,
     .button-active-second:hover {
@@ -116,14 +118,72 @@ $tv: 2550px;
   section.navbar.active {
     background: white;
   }
+  // Landing
+  section.landing {
+    padding: 10rem 0 15em 1em;
+    background-color: color(light-blue);
+
+    @include for-phone-up() {
+      padding-left: 3em;
+    }
+    @include for-tablet-up() {
+      padding-left: 6em;
+    }
+    @include for-desktop-up() {
+      padding: 12rem 0 15em 15em; // bottom padding subject to change
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 100;
+      padding: 0.5em 0 1em 0;
+
+      @media screen and (min-width: 578px) {
+        font-size: 26px;
+      }
+      @include for-tablet-up() {
+        font-size: 30px;
+      }
+      @include for-desktop-up() {
+        font-size: 40px;
+      }
+    }
+    h2 {
+      font-size: 24px;
+
+      @media screen and (min-width: 578px) {
+        font-size: 28px;
+      }
+      @include for-tablet-up() {
+        font-size: 32px;
+      }
+      @include for-desktop-up() {
+        font-size: 44px;
+      }
+    }
+    button {
+      @include for-tablet-up() {
+        font-size: 16px;
+      }
+      @include for-desktop-up() {
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 // helpers
 .has-shadow {
   box-shadow: 0 2px 3px 0 hsla(0, 0%, 0%, 0.2);
 }
-
-// content
-.content {
-  padding: 50rem 0;
+.button {
+  color: #fff;
+  background: color(primary);
+  border: 1px solid color(primary);
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 14px;
+  transition: ease-in-out 200ms;
+  white-space: nowrap;
+  line-height: 150%;
 }
