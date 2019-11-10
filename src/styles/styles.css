@@ -19,17 +19,28 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.5em 5em;
-  background: #b3d6f0;
+  padding: 0.5em 1em;
+  background: #abd4f2;
   width: 100vw;
   position: fixed;
   -webkit-transition: ease-in-out 250ms;
   transition: ease-in-out 250ms;
 }
 
+@media screen and (min-width: 768px) {
+  .container section.navbar {
+    padding: 0.5em 5em;
+  }
+}
+
 .container section.navbar img {
-  width: 200px;
-  height: auto;
+  width: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  .container section.navbar img {
+    width: 200px;
+  }
 }
 
 .container section.navbar .nav-button,
@@ -42,6 +53,7 @@
   font-size: 14px;
   -webkit-transition: ease-in-out 200ms;
   transition: ease-in-out 200ms;
+  white-space: nowrap;
 }
 
 .container section.navbar .button:hover,
