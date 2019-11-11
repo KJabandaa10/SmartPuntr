@@ -21,7 +21,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.5em 1em;
-  background: #abd4f2;
   width: 100vw;
   position: fixed;
   -webkit-transition: ease-in-out 250ms;
@@ -82,11 +81,28 @@
 .container section.landing {
   padding: 10rem 0 15em 1em;
   background-color: #abd4f2;
+  background-image: url(/img/icons-background-phone.png);
+  background-position: 25%;
+  background-size: 175%;
 }
 
 @media screen and (min-width: 414px) {
   .container section.landing {
     padding-left: 3em;
+  }
+}
+
+@media screen and (min-width: 578px) {
+  .container section.landing {
+    background-image: url(/img/icons-background-tablet.png);
+    background-size: 140%;
+    background-position: 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container section.landing {
+    background-size: 120%;
   }
 }
 
@@ -99,6 +115,7 @@
 @media screen and (min-width: 1440px) {
   .container section.landing {
     padding: 12rem 0 15em 15em;
+    background-image: url(/img/icons-background-desktop.png);
   }
 }
 
