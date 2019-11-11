@@ -13,6 +13,15 @@ $colors: (
   primary-dark: darken(#1593ff, 10%),
   light-blue: #abd4f2
 );
+// Font sizes
+$fonts: (
+  mobile-header: 24px,
+  mobile-text: 22px,
+  tablet-header: 32px,
+  tablet-text: 30px,
+  desktop-header: 44px,
+  desktop-text: 40px
+);
 
 // Media Queries
 // Responsiive mq values
@@ -61,6 +70,10 @@ $tv: 2550px;
 // Get color mixin
 @function color($color-name) {
   @return map-get($colors, $color-name);
+}
+// Get font size mixin
+@function font($font-tier) {
+  @return map-get($fonts, $font-tier);
 }
 
 .container {
@@ -147,7 +160,7 @@ $tv: 2550px;
     }
 
     h1 {
-      font-size: 22px;
+      font-size: font(mobile-header);
       font-weight: 100;
       padding: 0.5em 0 1em 0;
 
@@ -155,23 +168,23 @@ $tv: 2550px;
         font-size: 26px;
       }
       @include for-tablet-up() {
-        font-size: 30px;
+        font-size: font(tablet-text);
       }
       @include for-desktop-up() {
-        font-size: 40px;
+        font-size: font(desktop-text);
       }
     }
     h2 {
-      font-size: 24px;
+      font-size: font(mobile-header);
 
       @media screen and (min-width: 578px) {
         font-size: 28px;
       }
       @include for-tablet-up() {
-        font-size: 32px;
+        font-size: font(tablet-header);
       }
       @include for-desktop-up() {
-        font-size: 44px;
+        font-size: font(desktop-header);
       }
     }
     button {
@@ -180,6 +193,49 @@ $tv: 2550px;
       }
       @include for-desktop-up() {
         font-size: 18px;
+      }
+    }
+  }
+  section.automate {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0 0 1em;
+
+    .text {
+      h3 {
+        font-size: font(mobile-header);
+        color: color(primary);
+      }
+
+      .point {
+        margin: 1em 0;
+        display: grid;
+        grid-template: 0.2fr 1fr / 10fr 100fr;
+        gap: 0.2em;
+        max-width: 100vw;
+        font-size: 18px;
+        font-weight: 300;
+
+        svg {
+          color: color(primary);
+          margin-right: 0.3em;
+          justify-self: center;
+        }
+
+        .move-grid {
+          grid-column: 2;
+          font-weight: 100;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .img-div {
+      justify-self: center;
+
+      img {
+        width: 80vw;
+        height: auto;
       }
     }
   }
