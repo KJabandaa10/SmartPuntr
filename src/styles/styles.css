@@ -120,7 +120,7 @@
 }
 
 .container section.landing h1 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 100;
   padding: 0.5em 0 1em 0;
 }
@@ -175,6 +175,59 @@
   .container section.landing button {
     font-size: 18px;
   }
+}
+
+.container section.automate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em 0 0 1em;
+}
+
+.container section.automate .text h3 {
+  font-size: 24px;
+  color: #1593ff;
+}
+
+.container section.automate .text .point {
+  margin: 1em 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.2fr 1fr;
+  -ms-grid-columns: 10fr 100fr;
+      grid-template: 0.2fr 1fr / 10fr 100fr;
+  gap: 0.2em;
+  max-width: 100vw;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.container section.automate .text .point svg {
+  color: #1593ff;
+  margin-right: 0.3em;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.container section.automate .text .point .move-grid {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.container section.automate .img-div {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.container section.automate .img-div img {
+  width: 80vw;
+  height: auto;
 }
 
 .has-shadow {
