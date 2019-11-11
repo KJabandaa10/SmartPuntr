@@ -71,7 +71,6 @@ $tv: 2550px;
     align-items: center;
     justify-content: space-between;
     padding: 0.5em 1em;
-    background: color(light-blue);
     width: 100vw;
     position: fixed;
     transition: ease-in-out 250ms;
@@ -122,15 +121,29 @@ $tv: 2550px;
   section.landing {
     padding: 10rem 0 15em 1em;
     background-color: color(light-blue);
+    background-image: url(/img/icons-background-phone.png);
+    background-position: 25%;
+    background-size: 175%;
 
     @include for-phone-up() {
       padding-left: 3em;
+    }
+    @media screen and (min-width: 578px) {
+      background-image: url(/img/icons-background-tablet.png);
+      background-size: 140%;
+      background-position: 10%;
+    }
+    @include for-tablet-lg-up() {
+      background-size: 120%;
     }
     @include for-tablet-up() {
       padding-left: 6em;
     }
     @include for-desktop-up() {
       padding: 12rem 0 15em 15em; // bottom padding subject to change
+      // background-size: 100%;
+      // background-position: -10%;
+      background-image: url(/img/icons-background-desktop.png);
     }
 
     h1 {
