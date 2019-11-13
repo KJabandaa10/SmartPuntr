@@ -142,7 +142,7 @@
 }
 
 .container section.landing h1 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 100;
   padding: 0.5em 0 1em 0;
 }
@@ -159,14 +159,8 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .container section.landing h1 {
-    font-size: 38px;
-  }
-}
-
 .container section.landing h2 {
-  font-size: 24px;
+  font-size: 26px;
 }
 
 @media screen and (min-width: 578px) {
@@ -199,21 +193,22 @@
   }
 }
 
-.container h3 {
-  font-size: 24px;
+.container .header {
+  font-size: 26px;
   color: #1593ff;
   text-align: center;
   padding: 1em;
 }
 
 @media screen and (min-width: 768px) {
-  .container h3 {
+  .container .header {
     font-size: 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .container h3 {
+  .container .header {
+    padding: 1.5em;
     font-size: 44px;
   }
 }
@@ -285,12 +280,24 @@
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .container section.automate .point .move-grid {
+    font-size: 26px;
+  }
+}
+
 .container section.automate .point-header {
   font-weight: 500;
 }
 
 .container section.automate .point-1 {
   margin-top: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .container section.automate .point-header {
+    font-size: 26px;
+  }
 }
 
 .container section.automate .img-div {
@@ -311,6 +318,48 @@
 @media screen and (min-width: 834px) {
   .container section.automate .img-div img {
     max-width: 45vw;
+  }
+}
+
+.container section.bookies {
+  margin: 2em;
+}
+
+@media screen and (min-width: 561px) {
+  .container section.bookies {
+    margin: 3em;
+  }
+}
+
+.container section.bookies h4 {
+  border-bottom: 1px solid black;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+@media screen and (min-width: 834px) {
+  .container section.bookies h4 {
+    max-width: 50vw;
+  }
+}
+
+.container section.bookies p {
+  padding: 1em 0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 834px) {
+  .container section.bookies p {
+    margin: 0 10vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container section.bookies p {
+    padding: 2em 0;
+    font-size: 26px;
   }
 }
 

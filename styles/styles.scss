@@ -15,7 +15,7 @@ $colors: (
 );
 // Font sizes
 $fonts: (
-  mobile-header: 24px,
+  mobile-header: 26px,
   mobile-text: 22px,
   tablet-header: 32px,
   tablet-text: 30px,
@@ -181,9 +181,7 @@ $tv: 2550px;
       padding-left: 6em;
     }
     @include for-desktop-up() {
-      padding: 12rem 0 15em 15em; // bottom padding subject to change
-      // background-size: 100%;
-      // background-position: -10%;
+      padding: 12rem 0 15em 15em;
       background-image: url(/img/icons-background-desktop.png);
     }
 
@@ -197,9 +195,6 @@ $tv: 2550px;
       }
       @include for-tablet-up() {
         font-size: font(tablet-text);
-      }
-      @include for-desktop-up() {
-        font-size: font(desktop-text);
       }
     }
     h2 {
@@ -224,7 +219,7 @@ $tv: 2550px;
       }
     }
   }
-  h3 {
+  .header {
     font-size: font(mobile-header);
     color: color(primary);
     text-align: center;
@@ -234,6 +229,7 @@ $tv: 2550px;
       font-size: font(tablet-header);
     }
     @include for-desktop-up() {
+      padding: 1.5em;
       font-size: font(desktop-header);
     }
   }
@@ -281,6 +277,9 @@ $tv: 2550px;
         @include for-tablet-up() {
           max-width: 70vw;
         }
+        @include for-desktop-up() {
+          font-size: font(mobile-header);
+        }
       }
     }
     .point-header {
@@ -288,6 +287,11 @@ $tv: 2550px;
     }
     .point-1 {
       margin-top: 0;
+    }
+    .point-header {
+      @include for-desktop-up() {
+        font-size: font(mobile-header);
+      }
     }
 
     .img-div {
@@ -303,6 +307,38 @@ $tv: 2550px;
         @include for-tablet-sm-up() {
           max-width: 45vw;
         }
+      }
+    }
+  }
+  section.bookies {
+    margin: 2em;
+
+    @media screen and (min-width: 561px) {
+      margin: 3em;
+    }
+
+    h4 {
+      border-bottom: 1px solid black;
+      margin: 0 auto;
+      padding: 1em 0;
+
+      @include for-tablet-sm-up() {
+        max-width: 50vw;
+      }
+    }
+
+    p {
+      padding: 1em 0;
+      text-align: center;
+      font-size: font(mobile-text);
+      font-weight: 100;
+
+      @include for-tablet-sm-up() {
+        margin: 0 10vw;
+      }
+      @include for-desktop-up() {
+        padding: 2em 0;
+        font-size: font(mobile-header);
       }
     }
   }
