@@ -102,16 +102,11 @@
 
 .container section.landing {
   padding: 10rem 0 15em 1em;
+  height: 80vh;
   background-color: #abd4f2;
   background-image: url(/img/icons-background-phone.png);
   background-position: 25%;
-  background-size: 175%;
-}
-
-@media screen and (min-width: 414px) {
-  .container section.landing {
-    padding-left: 3em;
-  }
+  background-size: 205%;
 }
 
 @media screen and (min-width: 578px) {
@@ -122,15 +117,25 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .container section.landing {
-    background-size: 120%;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .container section.landing {
     padding-left: 6em;
+    padding-top: 15em;
+    height: 75vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container section.landing {
+    padding-top: 17em;
+    background-size: 120%;
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .container section.landing {
+    height: 75vh;
   }
 }
 
@@ -138,6 +143,13 @@
   .container section.landing {
     padding: 12rem 0 15em 15em;
     background-image: url(/img/icons-background-desktop.png);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container section.landing {
+    height: 85vh;
+    padding-top: 20em;
   }
 }
 
