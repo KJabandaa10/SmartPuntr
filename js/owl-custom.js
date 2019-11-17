@@ -3,12 +3,25 @@ $(document).ready(function() {
 });
 var owl = $(".owl-carousel");
 owl.owlCarousel({
-  items: 2,
   loop: true,
-  margin: 10,
   autoplay: true,
   lazyload: true, // check this
-  autoplayTimeout: 1000,
+  responsiveClass: true,
+  responsive: {
+    0: {
+      items: 2
+    },
+    600: {
+      items: 3
+    },
+    1024: {
+      items: 4
+    },
+    1440: {
+      items: 5
+    }
+  },
+  autoplayTimeout: 2000,
   autoplayHoverPause: true
 });
 $(window).on("load", function() {
