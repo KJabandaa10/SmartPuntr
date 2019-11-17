@@ -167,7 +167,7 @@
 
 @media screen and (min-width: 768px) {
   .container section.landing h1 {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 
@@ -183,7 +183,7 @@
 
 @media screen and (min-width: 768px) {
   .container section.landing h2 {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 
@@ -214,7 +214,7 @@
 
 @media screen and (min-width: 768px) {
   .container .header {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 
@@ -340,6 +340,7 @@
 @media screen and (min-width: 561px) {
   .container section.bookies {
     margin: 3em;
+    margin-top: 5em;
   }
 }
 
@@ -372,6 +373,116 @@
   .container section.bookies p {
     padding: 2em 0;
     font-size: 26px;
+  }
+}
+
+.container .owl-carousel {
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .container .owl-carousel {
+    margin-bottom: 5em;
+  }
+}
+
+.container section.oneroof {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1em;
+}
+
+@media screen and (min-width: 590px) {
+  .container section.oneroof {
+    margin: 0 3em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container section.oneroof {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container section.oneroof {
+    margin: 0 10vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container section.oneroof {
+    margin: 0 15vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container section.oneroof .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.container section.oneroof .left p {
+  list-style-type: none;
+  font-weight: 100;
+  font-size: 22px;
+  padding: 0.2em;
+}
+
+@media screen and (min-width: 834px) {
+  .container section.oneroof .left p {
+    padding: 0.5em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container section.oneroof .left p {
+    font-size: 26px;
+  }
+}
+
+.container section.oneroof .right {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.container section.oneroof .right img {
+  width: 90vw;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container section.oneroof .right img {
+    width: 75vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container section.oneroof .right img {
+    max-width: 50vw;
   }
 }
 
