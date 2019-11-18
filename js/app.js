@@ -38,3 +38,12 @@ function changeButton(e) {
 }
 
 window.addEventListener("scroll", debounce(changeButton));
+
+// button link to c2a
+const buttons = document.querySelectorAll("button");
+
+function linkToC2a() {
+  window.open("https://google.com"); // change to c2a page
+}
+
+buttons.forEach(button => button.addEventListener("click", linkToC2a));
