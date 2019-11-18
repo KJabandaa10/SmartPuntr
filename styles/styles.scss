@@ -72,6 +72,11 @@ $tv: 2550px;
     @content;
   }
 }
+@mixin for-desktop-lg-up {
+  @media screen and (min-width: $med-screen) {
+    @content;
+  }
+}
 @mixin for-desktop-only {
   @media screen and (max-width: $med-screen) {
     @content;
@@ -108,10 +113,10 @@ $tv: 2550px;
     text-align: center;
   }
 }
-
 .container {
   // Navbar
-  section.navbar {
+  .navbar {
+    z-index: 99;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -160,11 +165,11 @@ $tv: 2550px;
       background-color: color(primary-dark);
     }
   }
-  section.navbar.active {
+  .navbar.active {
     background: white;
   }
   // Landing
-  section.landing {
+  .landing {
     padding: 10rem 0 15em 1em;
     height: 80vh;
     background-color: color(light-blue);
@@ -259,6 +264,10 @@ $tv: 2550px;
     }
     @include for-desktop-up() {
       margin: 0 5em;
+    }
+    @include for-desktop-lg-up() {
+      margin-left: 10vw;
+      margin-right: 10vw;
     }
 
     .point {
@@ -358,7 +367,8 @@ $tv: 2550px;
     }
   }
   .owl-carousel {
-    margin-bottom: 1em;
+    margin-bottom: 5em;
+    z-index: 1;
 
     @include for-tablet-up() {
       margin-bottom: 5em;
@@ -421,6 +431,149 @@ $tv: 2550px;
       }
     }
   }
+  section.punters {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+
+    @media screen and (min-width: 609px) {
+      margin: 5em 4vw;
+    }
+    @include for-tablet-lg-up() {
+      margin: 5em 10vw;
+    }
+    @include for-desktop-up() {
+      margin: 5em 15vw;
+    }
+    @media screen and (min-width: 777px) {
+      display: grid;
+      grid-template: 1fr / 1fr 1fr;
+      gap: 8vw;
+    }
+
+    .left {
+      margin-left: 1.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      @media screen and (min-width: 609px) {
+        padding-left: 0;
+        margin: 5em 0;
+      }
+
+      h6 {
+        font-size: font(mobile-header);
+
+        @include for-tablet-up() {
+          font-size: font(tablet-header);
+        }
+        @include for-desktop-up() {
+          font-size: font(desktop-header);
+        }
+      }
+      p {
+        font-size: font(mobile-text);
+        font-weight: 100;
+        padding: 1em 0;
+
+        @media screen and (min-width: 777px) {
+          max-width: 40vw;
+        }
+        @include for-tablet-lg-up() {
+          font-size: font(tablet-text);
+        }
+        @include for-desktop-lg-up() {
+          padding: 2em 0;
+        }
+      }
+      button {
+        max-width: 180px;
+      }
+    }
+    .right {
+      align-self: center;
+      justify-content: center;
+
+      img {
+        width: 80vw;
+        height: auto;
+        margin: 2em 0;
+
+        @include for-tablet-mini-up() {
+          width: 50vw;
+          max-width: 500px;
+        }
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+
+    .banner {
+      display: grid;
+      grid-template: 1fr 1fr / repeat(4, 1fr);
+      row-gap: 1em;
+      justify-items: center;
+      align-items: center;
+      background: color(primary);
+      padding: 2em 0;
+
+      @media screen and (min-width: 626px) {
+        grid-template: 1fr / 3fr repeat(4, 1fr);
+        padding: 2em 5vw;
+        align-items: flex-start;
+      }
+
+      img {
+        max-width: 50vw;
+        height: auto;
+        grid-row: 1;
+        grid-column: 2 / span 2;
+
+        @media screen and (min-width: 626px) {
+          grid-column: 1;
+          max-width: 25vw;
+          max-width: 250px;
+        }
+      }
+      p {
+        text-align: center;
+        grid-row: 2;
+        font-size: 16px;
+
+        @media screen and (min-width: 626px) {
+          grid-row: 1;
+          padding: 0 0.5em;
+        }
+        @include for-tablet-lg-up() {
+          font-size: font(mobile-text);
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 2em 0;
+
+      @include for-tablet-lg-up() {
+        margin: 5em 0;
+      }
+
+      a {
+        cursor: pointer;
+
+        img {
+          width: 40px;
+          height: auto;
+        }
+      }
+    }
+  }
 }
 
 // helpers
@@ -437,4 +590,14 @@ $tv: 2550px;
   transition: ease-in-out 200ms;
   white-space: nowrap;
   line-height: 150%;
+}
+section {
+  @include for-desktop-lg-up() {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+button:hover {
+  cursor: pointer;
+  background-color: color(primary-dark);
 }
