@@ -6,28 +6,6 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.containerr {
-  background: #abd4f2;
-  height: 100vh;
-  width: 100vw;
-}
-
-.containerr img {
-  display: block;
-  margin: auto;
-  padding-top: 30vh;
-  width: 300px;
-  height: auto;
-}
-
-.containerr h1 {
-  margin-top: 1em;
-  font-family: Helvetica, sans-serif;
-  font-weight: 100;
-  font-size: 20px;
-  text-align: center;
-}
-
 .container .navbar {
   z-index: 99;
   display: -webkit-box;
