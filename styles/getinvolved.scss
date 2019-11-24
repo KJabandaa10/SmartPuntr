@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+// Variables
+// Colours
+$colors: (
+  primary: #1593ff,
+  primary-light: lighten(#1593ff, 40%),
+  primary-dark: darken(#1593ff, 10%),
+  light-blue: #abd4f2
+);
+// Font sizes
+$fonts: (
+  mobile-header: 26px,
+  mobile-text: 22px,
+  tablet-header: 30px,
+  tablet-text: 26px,
+  desktop-header: 44px,
+  desktop-text: 38px
+);
+
+// Media Queries
+// Responsiive mq values
+$phone-sm: 375px;
+$phone-lg: 414px;
+$tablet-mini: 768px;
+$tablet-sm: 834px;
+$tablet-lg: 1024px;
+$laptop-sm: 1440px;
+$med-screen: 1880px;
+$lg-screen: 2440px;
+$tv: 2550px;
+
+// Mixins
+// Media queries
+@mixin for-phone-only {
+  @media screen and (max-width: $phone-lg) {
+    @content;
+  }
+}
+@mixin for-phone-up {
+  @media screen and (min-width: $phone-lg) {
+    @content;
+  }
+}
+@mixin for-tablet-up {
+  @media screen and (min-width: $tablet-mini) {
+    @content;
+  }
+}
+@mixin for-tablet-mini-up {
+  @media screen and (min-width: $tablet-mini) {
+    @content;
+  }
+}
+@mixin for-tablet-sm-up {
+  @media screen and (min-width: $tablet-sm) {
+    @content;
+  }
+}
+@mixin for-tablet-lg-up {
+  @media screen and (min-width: $tablet-lg) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media screen and (min-width: $laptop-sm) {
+    @content;
+  }
+}
+@mixin for-desktop-lg-up {
+  @media screen and (min-width: $med-screen) {
+    @content;
+  }
+}
+@mixin for-desktop-only {
+  @media screen and (max-width: $med-screen) {
+    @content;
+  }
+}
+// Get color mixin
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+// Get font size mixin
+@function font($font-tier) {
+  @return map-get($fonts, $font-tier);
+}
+
+// styles
+.container {
+  .landing {
+    height: 40vh;
+    background-color: color(light-blue);
+    background-image: url(/img/icons-background-phone.png);
+    background-position: 25%;
+    background-size: 205%;
+
+    @media screen and (min-width: 578px) {
+      background-image: url(/img/icons-background-tablet.png);
+      background-size: 140%;
+      background-position: 10%;
+    }
+    @include for-tablet-lg-up() {
+      background-size: 120%;
+    }
+    @include for-desktop-up() {
+      background-image: url(/img/icons-background-desktop.png);
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      padding-top: 10vh;
+      width: 80vw;
+      height: auto;
+      max-width: 500px;
+    }
+  }
+
+  // Main
+  .main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2em;
+
+    @include for-tablet-lg-up() {
+      flex-direction: row;
+      margin: 2em;
+    }
+    @include for-desktop-up() {
+      margin: 5vw 10vw;
+    }
+
+    .text {
+      margin: 0 2.5vw;
+
+      h1 {
+        font-size: font(mobile-header);
+        font-weight: 400;
+        padding: 1em 0;
+      }
+      h2,
+      h3 {
+        font-size: font(mobile-text);
+        font-weight: 100;
+        padding: 0.5em 0;
+      }
+
+      form {
+        display: grid;
+        grid-template: repeat(5, 1fr) / 1fr;
+        margin: 1em 10vw 4em 10vw;
+
+        @include for-tablet-lg-up() {
+          margin: 0;
+        }
+
+        p {
+          text-align: left;
+        }
+        p.name {
+          align-self: flex-end;
+          padding-bottom: 0.4em;
+        }
+        p.check {
+          padding: 1em;
+          padding-left: 0;
+        }
+
+        input[type="text"] {
+          margin-bottom: 0.5em;
+          border: 1px solid rgb(151, 151, 151);
+          text-indent: 10px;
+        }
+      }
+    }
+
+    .dashboard {
+      align-self: flex-end;
+
+      img {
+        display: block;
+        margin: auto;
+        width: 85vw;
+        height: auto;
+        max-width: 800px;
+
+        @include for-tablet-lg-up() {
+          width: 50vw;
+        }
+      }
+    }
+  }
+}
+
+// helpers
+.has-shadow {
+  box-shadow: 0 2px 3px 0 hsla(0, 0%, 0%, 0.2);
+}
+.button {
+  color: #fff;
+  background: color(primary);
+  border: 1px solid color(primary);
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 14px;
+  transition: ease-in-out 200ms;
+  white-space: nowrap;
+  line-height: 150%;
+}
+button:hover {
+  cursor: pointer;
+}

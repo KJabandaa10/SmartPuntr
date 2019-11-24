@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container .landing {
+  height: 40vh;
+  background-color: #abd4f2;
+  background-image: url(/img/icons-background-phone.png);
+  background-position: 25%;
+  background-size: 205%;
+}
+
+@media screen and (min-width: 578px) {
+  .container .landing {
+    background-image: url(/img/icons-background-tablet.png);
+    background-size: 140%;
+    background-position: 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container .landing {
+    background-size: 120%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container .landing {
+    background-image: url(/img/icons-background-desktop.png);
+  }
+}
+
+.container .landing img {
+  display: block;
+  margin: auto;
+  padding-top: 10vh;
+  width: 80vw;
+  height: auto;
+  max-width: 500px;
+}
+
+.container .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width: 1024px) {
+  .container .main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 2em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container .main {
+    margin: 5vw 10vw;
+  }
+}
+
+.container .main .text {
+  margin: 0 2.5vw;
+}
+
+.container .main .text h1 {
+  font-size: 26px;
+  font-weight: 400;
+  padding: 1em 0;
+}
+
+.container .main .text h2,
+.container .main .text h3 {
+  font-size: 22px;
+  font-weight: 100;
+  padding: 0.5em 0;
+}
+
+.container .main .text form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+  -ms-grid-columns: 1fr;
+      grid-template: repeat(5, 1fr)/1fr;
+  margin: 1em 10vw 4em 10vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .container .main .text form {
+    margin: 0;
+  }
+}
+
+.container .main .text form p {
+  text-align: left;
+}
+
+.container .main .text form p.name {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-bottom: 0.4em;
+}
+
+.container .main .text form p.check {
+  padding: 1em;
+  padding-left: 0;
+}
+
+.container .main .text form input[type="text"] {
+  margin-bottom: 0.5em;
+  border: 1px solid #979797;
+  text-indent: 10px;
+}
+
+.container .main .dashboard {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.container .main .dashboard img {
+  display: block;
+  margin: auto;
+  width: 85vw;
+  height: auto;
+  max-width: 800px;
+}
+
+@media screen and (min-width: 1024px) {
+  .container .main .dashboard img {
+    width: 50vw;
+  }
+}
+
+.has-shadow {
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  color: #fff;
+  background: #1593ff;
+  border: 1px solid #1593ff;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 14px;
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
+  white-space: nowrap;
+  line-height: 150%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=getinvolved.css.map */
