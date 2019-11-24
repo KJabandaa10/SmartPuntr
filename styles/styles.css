@@ -593,6 +593,12 @@
   margin: 2em 0;
 }
 
+@media screen and (max-width: 415px) {
+  .container section.punters .right img {
+    margin: 3.5em 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container section.punters .right img {
     width: 50vw;
@@ -668,7 +674,7 @@
   }
 }
 
-.container .footer .banner p {
+.container .footer .banner a {
   text-align: center;
   -ms-grid-row: 2;
   grid-row: 2;
@@ -676,7 +682,7 @@
 }
 
 @media screen and (min-width: 626px) {
-  .container .footer .banner p {
+  .container .footer .banner a {
     -ms-grid-row: 1;
     grid-row: 1;
     padding: 0 0.5em;
@@ -684,7 +690,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .container .footer .banner p {
+  .container .footer .banner a {
     font-size: 22px;
   }
 }

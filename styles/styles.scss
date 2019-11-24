@@ -478,6 +478,10 @@ $tv: 2550px;
         height: auto;
         margin: 2em 0;
 
+        @media screen and (max-width: 415px) {
+          margin: 3.5em 0;
+        }
+
         @include for-tablet-mini-up() {
           width: 50vw;
           max-width: 500px;
@@ -526,7 +530,7 @@ $tv: 2550px;
           max-width: 250px;
         }
       }
-      p {
+      a {
         text-align: center;
         grid-row: 2;
         font-size: 16px;
