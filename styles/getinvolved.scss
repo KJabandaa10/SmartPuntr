@@ -190,7 +190,9 @@ $tv: 2550px;
     }
 
     .dashboard {
-      align-self: flex-end;
+      @include for-tablet-lg-up() {
+        align-self: flex-end;
+      }
 
       img {
         display: block;
