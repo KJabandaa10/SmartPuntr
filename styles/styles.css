@@ -648,6 +648,17 @@
   padding: 2em 0;
 }
 
+.container .footer .banner a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.container .footer .banner a:hover {
+  color: #fff;
+}
+
 @media screen and (min-width: 626px) {
   .container .footer .banner {
     -ms-grid-rows: 1fr;

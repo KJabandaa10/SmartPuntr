@@ -122,6 +122,14 @@ $tv: 2550px;
     }
   }
 
+  .back {
+    margin: 2em 1em;
+
+    @include for-tablet-mini-up() {
+      margin: 3em;
+    }
+  }
+
   // Main
   .main {
     display: flex;

@@ -521,6 +521,15 @@ $tv: 2550px;
       background: color(primary);
       padding: 2em 0;
 
+      a {
+        text-decoration: none;
+        color: #000;
+        transition: 250ms ease-in-out;
+      }
+      a:hover {
+        color: #fff;
+      }
+
       @media screen and (min-width: 626px) {
         grid-template: 1fr / 3fr repeat(4, 1fr);
         padding: 2em 5vw;

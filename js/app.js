@@ -43,7 +43,7 @@ window.addEventListener("scroll", debounce(changeButton));
 const buttons = document.querySelectorAll("button");
 
 function linkToC2a() {
-  window.open("https://google.com"); // change to c2a page
+  window.open("/getinvolved.html");
 }
 
 buttons.forEach(button => button.addEventListener("click", linkToC2a));

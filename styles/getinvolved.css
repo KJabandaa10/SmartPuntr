@@ -43,6 +43,16 @@
   max-width: 500px;
 }
 
+.container .back {
+  margin: 2em 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .container .back {
+    margin: 3em;
+  }
+}
+
 .container .main {
   display: -webkit-box;
   display: -ms-flexbox;
