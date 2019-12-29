@@ -81,7 +81,7 @@
 
 .container .landing {
   padding: 10rem 0 15em 1em;
-  height: 80vh;
+  height: 100vh;
   background-color: #abd4f2;
   background-image: url(/img/icons-background-phone.png);
   background-position: 25%;
@@ -100,7 +100,6 @@
   .container .landing {
     padding-left: 6em;
     padding-top: 15em;
-    height: 75vh;
   }
 }
 
@@ -108,13 +107,6 @@
   .container .landing {
     padding-top: 17em;
     background-size: 120%;
-    height: 60vh;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .container .landing {
-    height: 75vh;
   }
 }
 
@@ -127,7 +119,6 @@
 
 @media screen and (min-width: 1600px) {
   .container .landing {
-    height: 85vh;
     padding-top: 20em;
   }
 }

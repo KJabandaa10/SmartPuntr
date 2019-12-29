@@ -149,7 +149,7 @@ $tv: 2550px;
   // Landing
   .landing {
     padding: 10rem 0 15em 1em;
-    height: 80vh;
+    height: 100vh;
     background-color: color(light-blue);
     background-image: url(/img/icons-background-phone.png);
     background-position: 25%;
@@ -163,22 +163,16 @@ $tv: 2550px;
     @include for-tablet-up() {
       padding-left: 6em;
       padding-top: 15em;
-      height: 75vh;
     }
     @include for-tablet-lg-up() {
       padding-top: 17em;
       background-size: 120%;
-      height: 60vh;
-    }
-    @media screen and (min-width: 1300px) {
-      height: 75vh;
     }
     @include for-desktop-up() {
       padding: 12rem 0 15em 15em;
       background-image: url(/img/icons-background-desktop.png);
     }
     @media screen and (min-width: 1600px) {
-      height: 85vh;
       padding-top: 20em;
     }
 
