@@ -497,11 +497,11 @@ $tv: 2550px;
 
     .banner {
       display: grid;
-      grid-template: 1fr 1fr / repeat(4, 1fr);
+      grid-template: 1fr / repeat(4, 1fr);
       row-gap: 1em;
       justify-items: center;
       align-items: center;
-      background: color(primary);
+      background: rgb(172, 213, 242);
       padding: 2em 0;
 
       a {
