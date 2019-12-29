@@ -505,6 +505,20 @@ $tv: 2550px;
       background: rgb(172, 213, 242);
       padding: 2em 0;
 
+      img {
+        max-width: 50vw;
+        height: auto;
+        grid-row: 1;
+        grid-column: 1 / span 3;
+
+        @media screen and (min-width: 626px) {
+          grid-column: 1;
+          max-width: 25vw;
+          max-width: 250px;
+          justify-self: left;
+        }
+      }
+
       a {
         text-decoration: none;
         color: #000;
@@ -520,18 +534,6 @@ $tv: 2550px;
         align-items: flex-start;
       }
 
-      img {
-        max-width: 50vw;
-        height: auto;
-        grid-row: 1;
-        grid-column: 2 / span 2;
-
-        @media screen and (min-width: 626px) {
-          grid-column: 1;
-          max-width: 25vw;
-          max-width: 250px;
-        }
-      }
       a {
         text-align: center;
         grid-row: 2;
