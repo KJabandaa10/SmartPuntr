@@ -11,7 +11,8 @@ $colors: (
   primary: #1593ff,
   primary-light: lighten(#1593ff, 40%),
   primary-dark: darken(#1593ff, 10%),
-  light-blue: #abd4f2
+  light-blue: #abd4f2,
+  grey: rgb(230, 230, 230)
 );
 // Font sizes
 $fonts: (
@@ -497,7 +498,7 @@ $tv: 2550px;
 
     .banner {
       display: grid;
-      grid-template: 1fr / repeat(4, 1fr);
+      grid-template: 1fr / repeat(3, 1fr);
       row-gap: 1em;
       justify-items: center;
       align-items: center;

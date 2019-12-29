@@ -623,8 +623,8 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr;
-  -ms-grid-columns: (1fr)[4];
-      grid-template: 1fr/repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template: 1fr/repeat(3, 1fr);
   row-gap: 1em;
   justify-items: center;
   -webkit-box-align: center;
