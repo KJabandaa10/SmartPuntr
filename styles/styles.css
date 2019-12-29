@@ -6,6 +6,10 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.container .space {
+  padding: 10vh 0;
+}
+
 .container .navbar {
   z-index: 99;
   display: -webkit-box;
@@ -153,7 +157,7 @@
 
 @media screen and (min-width: 768px) {
   .container .landing h2 {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
@@ -179,12 +183,12 @@
   font-size: 26px;
   color: #1593ff;
   text-align: center;
-  padding: 1em;
+  padding: 3em 0;
 }
 
 @media screen and (min-width: 768px) {
   .container .header {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
@@ -266,6 +270,7 @@
 @media screen and (min-width: 768px) {
   .container section.automate .point .move-grid {
     max-width: 70vw;
+    font-size: 24px;
   }
 }
 
@@ -275,17 +280,23 @@
   }
 }
 
-.container section.automate .point-header {
-  font-weight: 500;
-}
-
 .container section.automate .point-1 {
   margin-top: 0;
 }
 
-@media screen and (min-width: 1440px) {
+.container section.automate .point-header {
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
   .container section.automate .point-header {
     font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container section.automate .point-header {
+    font-size: 32px;
   }
 }
 
@@ -531,7 +542,7 @@
 
 @media screen and (min-width: 768px) {
   .container section.punters .left h6 {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 

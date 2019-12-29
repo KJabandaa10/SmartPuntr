@@ -17,7 +17,7 @@ $colors: (
 $fonts: (
   mobile-header: 26px,
   mobile-text: 22px,
-  tablet-header: 30px,
+  tablet-header: 32px,
   tablet-text: 26px,
   desktop-header: 44px,
   desktop-text: 38px
@@ -92,6 +92,10 @@ $tv: 2550px;
 }
 
 .container {
+  // Added space
+  .space {
+    padding: 10vh 0;
+  }
   // Navbar
   .navbar {
     z-index: 99;
@@ -214,7 +218,7 @@ $tv: 2550px;
     font-size: font(mobile-header);
     color: color(primary);
     text-align: center;
-    padding: 1em;
+    padding: 3em 0;
 
     @include for-tablet-up() {
       font-size: font(tablet-header);
@@ -271,21 +275,24 @@ $tv: 2550px;
 
         @include for-tablet-up() {
           max-width: 70vw;
+          font-size: 24px;
         }
         @include for-desktop-up() {
           font-size: font(mobile-header);
         }
       }
     }
-    .point-header {
-      font-weight: 500;
-    }
     .point-1 {
       margin-top: 0;
     }
     .point-header {
+      font-weight: 500;
+
+      @include for-tablet-up() {
+        font-size: 26px;
+      }
       @include for-desktop-up() {
-        font-size: font(mobile-header);
+        font-size: font(tablet-header);
       }
     }
 
