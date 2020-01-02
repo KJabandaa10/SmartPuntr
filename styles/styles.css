@@ -84,7 +84,7 @@
 }
 
 .container .landing {
-  padding: 10rem 0 15em 1em;
+  padding: 35vh 0 15em 1em;
   height: 100vh;
   background-color: #abd4f2;
   background-image: url(/img/icons-background-phone.png);
@@ -103,27 +103,20 @@
 @media screen and (min-width: 768px) {
   .container .landing {
     padding-left: 6em;
-    padding-top: 15em;
+    padding-top: 35vh;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container .landing {
-    padding-top: 17em;
     background-size: 120%;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .container .landing {
-    padding: 12rem 0 15em 15em;
+    padding: 35vh 0 15em 15em;
     background-image: url(/img/icons-background-desktop.png);
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .container .landing {
-    padding-top: 20em;
   }
 }
 
@@ -322,13 +315,19 @@
 }
 
 .container section.bookies {
-  margin: 2em;
+  padding: 3em;
+  background-color: #f7f7f7;
 }
 
 @media screen and (min-width: 561px) {
   .container section.bookies {
-    margin: 3em;
-    margin-top: 5em;
+    padding-top: 5em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container section.bookies {
+    padding-top: 8em;
   }
 }
 
@@ -365,13 +364,14 @@
 }
 
 .container .owl-carousel {
-  margin-bottom: 5em;
+  background-color: #f7f7f7;
+  padding-bottom: 5em;
   z-index: 1;
 }
 
 @media screen and (min-width: 768px) {
   .container .owl-carousel {
-    margin-bottom: 5em;
+    padding-bottom: 10em;
   }
 }
 
@@ -483,24 +483,29 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 5em;
+  padding-top: 5em;
+  background: #f7f7f7;
+}
+
+.container section.punters h6 {
+  color: #1593ff;
 }
 
 @media screen and (min-width: 609px) {
   .container section.punters {
-    margin: 5em 4vw;
+    padding: 5em 4vw;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container section.punters {
-    margin: 5em 10vw;
+    padding: 5em 10vw;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .container section.punters {
-    margin: 5em 15vw;
+    padding: 5em 15vw;
   }
 }
 
@@ -516,7 +521,7 @@
 }
 
 .container section.punters .left {
-  margin-left: 1.5em;
+  padding-left: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -532,7 +537,7 @@
 @media screen and (min-width: 609px) {
   .container section.punters .left {
     padding-left: 0;
-    margin: 5em 0;
+    padding: 5em 0;
   }
 }
 
@@ -592,12 +597,12 @@
 .container section.punters .right img {
   width: 80vw;
   height: auto;
-  margin: 2em 0;
+  padding: 2em 0;
 }
 
 @media screen and (max-width: 415px) {
   .container section.punters .right img {
-    margin: 3.5em 0;
+    padding: 3.5em 0;
   }
 }
 
@@ -620,13 +625,16 @@
 }
 
 .container .footer .banner {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr;
-  -ms-grid-columns: (1fr)[3];
-      grid-template: 1fr/repeat(3, 1fr);
-  row-gap: 1em;
-  justify-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -637,21 +645,13 @@
 .container .footer .banner img {
   max-width: 50vw;
   height: auto;
-  -ms-grid-row: 1;
-  grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1 / span 3;
+  margin-bottom: 2em;
 }
 
 @media screen and (min-width: 626px) {
   .container .footer .banner img {
-    -ms-grid-column: 1;
-    grid-column: 1;
     max-width: 25vw;
     max-width: 250px;
-    -ms-grid-column-align: left;
-        justify-self: left;
   }
 }
 
@@ -666,29 +666,13 @@
   color: #fff;
 }
 
-@media screen and (min-width: 626px) {
-  .container .footer .banner {
-    -ms-grid-rows: 1fr;
-    -ms-grid-columns: 3fr (1fr)[4];
-        grid-template: 1fr/3fr repeat(4, 1fr);
-    padding: 2em 5vw;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
 .container .footer .banner a {
   text-align: center;
-  -ms-grid-row: 2;
-  grid-row: 2;
   font-size: 16px;
 }
 
 @media screen and (min-width: 626px) {
   .container .footer .banner a {
-    -ms-grid-row: 1;
-    grid-row: 1;
     padding: 0 0.5em;
   }
 }
