@@ -7,27 +7,68 @@
 .header {
   text-align: center;
 }
+li {
+  padding: 1em 0;
+}
+/* body tags */
+body {
+  background-color: #94ccf2;
+  color: black;
+  font-weight: 500;
+  background-image: url(/img/icons-background-phone.png);
+  background-position: 25%;
+  background-size: 305%;
+}
+@media (min-width: 550px) {
+  body {
+    background-image: url(/img/icons-background-tablet.png);
+    background-size: 170%;
+    background-position: 10%;
+    font-size: 20px;
+  }
 
+  li {
+    padding: 0.5em 0;
+  }
+}
+
+/* .body class div */
 .body {
   text-align: left;
+  /* @include for-tablet-up() {
+      padding-left: 6em;
+      padding-top: 35vh;
+    }
+    @include for-tablet-lg-up() {
+      background-size: 120%;
+    }
+    @include for-desktop-up() {
+      padding: 35vh 0 15em 15em;
+      background-image: url(/img/icons-background-desktop.png);
+    } */
 }
 
 .body {
-  margin: 0 5vw;
+  padding: 0 5vw;
 }
 
 @media screen and (min-width: 500px) {
   .body {
-    margin: 0 10vw;
+    padding: 0 10vw;
   }
 }
 @media screen and (min-width: 768px) {
   .body {
-    margin: 5vh 15vw;
+    padding: 5vh 15vw;
   }
 }
 @media screen and (min-width: 1000px) {
   .body {
-    margin: 5vh 20vw;
+    padding: 5vh 20vw;
   }
+}
+
+a {
+  padding: 0;
+  margin: 0;
 }
