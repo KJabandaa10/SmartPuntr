@@ -9,6 +9,12 @@
 }
 li {
   padding: 1em 0;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  li {
+    max-width: 50vw;
+  }
 }
 /* body tags */
 body {
