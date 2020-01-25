@@ -499,12 +499,6 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .container section.punters {
-    padding: 5em 15vw;
-  }
-}
-
 @media screen and (min-width: 777px) {
   .container section.punters {
     display: -ms-grid;
@@ -728,8 +722,8 @@
 
 @media screen and (min-width: 1880px) {
   section {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }
 

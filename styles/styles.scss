@@ -427,9 +427,9 @@ $tv: 2550px;
     @include for-tablet-lg-up() {
       padding: 5em 10vw;
     }
-    @include for-desktop-up() {
-      padding: 5em 15vw;
-    }
+    // @include for-desktop-up() {
+    //   padding: 5em 15vw;
+    // }
     @media screen and (min-width: 777px) {
       display: grid;
       grid-template: 1fr / 1fr 1fr;
@@ -581,8 +581,8 @@ $tv: 2550px;
 }
 section {
   @include for-desktop-lg-up() {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }
 button:hover {
