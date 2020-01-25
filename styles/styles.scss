@@ -232,15 +232,15 @@ $tv: 2550px;
 
     @include for-tablet-sm-up() {
       grid-template: 1fr / 1fr 1fr;
-      margin: 0 2em;
+      padding: 0 2em;
       gap: 1em;
     }
     @include for-desktop-up() {
-      margin: 0 5em;
+      padding: 0 5em;
     }
     @include for-desktop-lg-up() {
-      margin-left: 10vw;
-      margin-right: 10vw;
+      padding-left: 10vw;
+      padding-right: 10vw;
     }
 
     .point {

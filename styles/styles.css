@@ -206,21 +206,21 @@
     -ms-grid-rows: 1fr;
     -ms-grid-columns: 1fr 1fr;
         grid-template: 1fr / 1fr 1fr;
-    margin: 0 2em;
+    padding: 0 2em;
     gap: 1em;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .container section.automate {
-    margin: 0 5em;
+    padding: 0 5em;
   }
 }
 
 @media screen and (min-width: 1880px) {
   .container section.automate {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }
 
